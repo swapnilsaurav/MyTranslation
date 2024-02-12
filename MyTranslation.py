@@ -6,7 +6,7 @@ import prog1
 # Set the model engine and your OpenAI API key
 model_engine = "gpt-3.5-turbo-instruct"
 #openai.api_key = "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"
-openai.api_key - "MY_API_KEY"
+openai.api_key = "MY_API_KEY"
 
 #define a function to handle the translation process
 def translation_process(content,target_lang):
