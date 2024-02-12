@@ -5,7 +5,7 @@ import prog1
 
 # Set the model engine and your OpenAI API key
 model_engine = "text-davinci-003"
-openai.api_key = MY_API_KEY
+openai.api_key = prog1.MY_API_KEY
 
 #define a function to handle the translation process
 def translation_process(content,target_lang):
