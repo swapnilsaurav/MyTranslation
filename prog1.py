@@ -1,3 +1,1 @@
-MY_API_KEY = "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"
-#secret key = LearnGPT
-OWM_API_KEY = "cf8555e0d634926ccdfab345a9b9a5b3"
+
