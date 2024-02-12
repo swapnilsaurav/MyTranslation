@@ -1,7 +1,7 @@
 # Importing required packages
 import streamlit as st
 import openai
-import prog1
+#import prog1
 
 # Set the model engine and your OpenAI API key
 model_engine = "gpt-3.5-turbo-instruct"
