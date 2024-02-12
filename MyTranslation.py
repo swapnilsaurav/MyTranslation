@@ -4,13 +4,13 @@ import openai
 import prog1
 
 # Set the model engine and your OpenAI API key
-model_engine = "text-davinci-003"
+model_engine = "gpt-3.5-turbo-instruct"
 openai.api_key = prog1.MY_API_KEY
 
 #define a function to handle the translation process
 def translation_process(content,target_lang):
     prompt=f"Translate '{content}' into {target_lang}"
-    response = openai.Completion.create(
+    response = openai.completions.create(
         model=model_engine,
         prompt=prompt,
         temperature=0.7,
