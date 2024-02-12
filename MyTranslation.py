@@ -1,12 +1,12 @@
 # Importing required packages
 import streamlit as st
 import openai
-#import prog1
+import prog1
 
 # Set the model engine and your OpenAI API key
 model_engine = "gpt-3.5-turbo-instruct"
-openai.api_key = "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"
-#openai.api_key = "MY_API_KEY"
+#openai.api_key = prog1.MY_API_KEY
+openai.api_key = st.secrets['my_api_key']
 
 #define a function to handle the translation process
 def translation_process(content,target_lang):
