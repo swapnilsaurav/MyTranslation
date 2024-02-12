@@ -15,9 +15,8 @@ def translation_process(content,target_lang):
         prompt=prompt,
         temperature=0.7,
         max_tokens=1024,
-        top_p=1.0,
-        frequency_penalty=0.0,
-        presence_penalty=0.0
+        n=1,
+        stop=none
     )
     #extract the translated text from the response
     translated = response.choices[0].text.strip()
