@@ -9,7 +9,7 @@ openai.api_key = st.secrets['my_api_key']
 
 #text to speech
 def text_to_speech(txt):
-    pass
+    return 0
 
 #define a function to handle the translation process
 def translation_process(content,target_lang):
