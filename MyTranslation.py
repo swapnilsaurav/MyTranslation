@@ -7,6 +7,12 @@ import openai
 model_engine = "gpt-3.5-turbo-instruct"
 #openai.api_key = prog1.MY_API_KEY
 openai.api_key = st.secrets['my_api_key']
+import gtts  
+from playsound import playsound  
+
+def text_to_speech(txt):
+    # make a request to google to get synthesis  
+    t1 = gtts.gTTS(txt)  
 
 #define a function to handle the translation process
 def translation_process(content,target_lang):
@@ -41,7 +47,9 @@ def main():
     #hit the button
     if trans_button:
         output_text.text("Translating ...")
-        output_text.text(translation_process(inp_content,target_lang))
+        txt = translation_process(inp_content,target_lang)
+        output_text.text(txt)
+        text_to_speech(txt)
 
 #driving code
 if __name__ == "__main__":
