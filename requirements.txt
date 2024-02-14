@@ -1,6 +1,4 @@
 pyttsx3
-playsound
-gTTS
 openai
 streamlit
 pandas
