@@ -1,13 +1,12 @@
 # Importing required packages
 import streamlit as st
 import openai
-#import prog1
+import pyttsx3
 
 # Set the model engine and your OpenAI API key
 model_engine = "gpt-3.5-turbo-instruct"
 #openai.api_key = prog1.MY_API_KEY
 openai.api_key = st.secrets['my_api_key']
-import pyttsx3
 
 def text_to_speech(txt):
     engine = pyttsx3.init()
