@@ -1,17 +1,19 @@
 # Importing required packages
 import streamlit as st
 import openai
-import pyttsx3
+from gtts import gTTS
+from io import BytesIO
 
 # Set the model engine and your OpenAI API key
 model_engine = "gpt-3.5-turbo-instruct"
 #openai.api_key = prog1.MY_API_KEY
 openai.api_key = st.secrets['my_api_key']
 
-def text_to_speech(txt):
-    engine = pyttsx3.init()
-    engine.say(txt)
-    engine.runAndWait()
+def text_to_speech(txt,lan):
+    sound_file = BytesIO()
+    tts = gTTS(txt, lang=lan)
+    tts.write_to_fp(sound_file)
+    st.audio(sound_file)
 
 #define a function to handle the translation process
 def translation_process(content,target_lang):
@@ -48,7 +50,7 @@ def main():
         output_text.text("Translating ...")
         txt = translation_process(inp_content,target_lang)
         output_text.text(txt)
-        text_to_speech(txt)
+        text_to_speech(txt,target_lang)
 
 #driving code
 if __name__ == "__main__":
