@@ -1,5 +1,3 @@
-gTTS
-BytesIO
 openai
 streamlit
 pandas
