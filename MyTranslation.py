@@ -7,12 +7,12 @@ import openai
 model_engine = "gpt-3.5-turbo-instruct"
 #openai.api_key = prog1.MY_API_KEY
 openai.api_key = st.secrets['my_api_key']
-import gtts  
-from playsound import playsound  
+import pyttsx3
 
 def text_to_speech(txt):
-    # make a request to google to get synthesis  
-    t1 = gtts.gTTS(txt)  
+    engine = pyttsx3.init()
+    engine.say(txt)
+    engine.runAndWait()
 
 #define a function to handle the translation process
 def translation_process(content,target_lang):
