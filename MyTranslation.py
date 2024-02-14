@@ -7,6 +7,10 @@ import openai
 model_engine = "gpt-3.5-turbo-instruct"
 openai.api_key = st.secrets['my_api_key']
 
+#text to speech
+def text_to_speech(txt):
+    pass
+
 #define a function to handle the translation process
 def translation_process(content,target_lang):
     prompt=f"Translate '{content}' into {target_lang}"
@@ -46,3 +50,4 @@ def main():
 #driving code
 if __name__ == "__main__":
     main()
+    text_to_speech(txt)
